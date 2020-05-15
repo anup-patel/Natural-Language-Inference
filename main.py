@@ -168,8 +168,8 @@ import torch.nn as nn
 from torchtext import data
 import torchtext
 from torchtext import datasets
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-# device='cpu'
+# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device='cpu'
 # print(device)
 
 
@@ -348,8 +348,8 @@ def val_model(model, val_iter):
 
 #Loading Model
 # model=torch.load('clserv_pytorch_lstm_model.pth') # To Run on GPU
-model=torch.load('model/lstm_model.pth') # To Run on GPU
-#model=torch.load('model/lstm_model_new.pth',map_location='cpu') #To Run on CPU
+# model=torch.load('model/lstm_model.pth') # To Run on GPU
+model=torch.load('model/lstm_model.pth',map_location='cpu') #To Run on CPU
 ## Train Loss: 0.450, Train Acc: 82.33%, Val. Loss: 0.575763, Val. Acc: 78.50%
 ### We are using results after training model
 train_loss=0.45
